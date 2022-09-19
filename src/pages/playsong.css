@@ -1,0 +1,137 @@
+.playlistPage {
+    background-color: rgb(214, 214, 214);
+}
+
+.mainInner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), #121212 40%);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    margin-bottom: auto;
+}
+
+.playlistPageInfo {
+    text-align: center;
+    padding: 1.5rem 0;
+    display: flex;
+}
+
+.playlistPageImage {
+    width: 250px;
+    height: 250px;
+}
+
+.playlistPageImage>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.playlistPageSongs {
+    height: 100%;
+}
+
+.playlistButtons {
+    display: flex;
+    align-items: center;
+}
+
+.PlayCircleIcon1 {
+    padding-right: 10px;
+}
+
+.playlistPageContent {
+    text-align: left;
+    padding: 1.5rem 2rem;
+}
+
+.playlistPageContent>h1 {
+    font-size: 7rem;
+    margin: 0;
+    line-height: 1;
+    font-family: circular-black;
+    word-spacing: -18px;
+    letter-spacing: -6px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+
+.playlistPageDesc {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.playlistPageDesc>p {
+    margin: 0;
+}
+
+.playlistPageDesc>span {
+    opacity: 0.7;
+    position: relative;
+    padding-left: 20px;
+}
+
+.songDetails {
+    width: auto;
+}
+
+.songDetails>h3 {
+    margin: 0;
+    font-weight: 100;
+    font-size: 1rem;
+    font: italic;
+}
+
+.songDetails>span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.songTime {
+    margin-left: 75%;
+}
+
+.songIcon {
+    padding-right: 1px;
+}
+
+.playI {
+    display: none;
+}
+
+ul.songList {
+    padding: 0;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+li {
+    list-style-type: none;
+    width: 100%;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.playI {
+    display: block;
+}
+
+.playlistImage {
+    margin: 10px;
+}
+
+.playlistImage>img {
+    height: 45px;
+}
