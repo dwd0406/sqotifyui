@@ -1,0 +1,47 @@
+.searchcardsWrapInner {
+    display: grid;
+    grid-gap: 46px;
+    grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
+    padding-bottom: 20px;
+}
+
+.searchcard {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: rgba(48, 48, 48, 0.2);
+    padding: 10px;
+}
+
+.searchcard:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.IMG {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    bottom: 0;
+    right: 0;
+    transform: rotate(25deg) translate(18%, -2%);
+    position: absolute;
+}
+
+.descspan {
+    opacity: 0.5;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+    position: absolute;
+}

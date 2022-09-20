@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
-import Playlists from '../playlist/playlist.jsx'
+import Playlists from '../playlist/index.jsx'
 import '../Categories/test.css';
 
 const Categories = () => {

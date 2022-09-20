@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../playlist/playlist.css'
+import '../playlist/index.css';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+
 const Playlists = props => {
     const dataPlaylists = [
         {

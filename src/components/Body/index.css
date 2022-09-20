@@ -1,9 +1,8 @@
 .body{
     color: white;
     background: linear-gradient(
-    rgb(0, 0, 0),rgb(0, 0, 0,1)
+    rgb(48, 48, 48),rgb(0, 0, 0,1)
     );
-    padding-bottom: auto;
 }
 h1,h2{
     font-size: 1.8rem;

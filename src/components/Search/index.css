@@ -1,0 +1,18 @@
+.SearchcardsmainInner {
+    padding: 0.5rem 2rem;
+    padding-bottom: 100px;
+}
+
+.subText {
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+.SearchcardsWrap {
+    padding-bottom: 0.8rem;
+}
+.INPUT{
+    height: 20px;
+    border-radius: 25px;
+    padding: 5px;
+    margin-top: 10px;
+}
