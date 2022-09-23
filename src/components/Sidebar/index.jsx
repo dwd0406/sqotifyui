@@ -20,7 +20,7 @@ const Sidebar = () => {
             <Link to={'/search'} className='link'>
                 <SidebaOption Icon={SearchIcon} option='搜尋' />
             </Link>
-            <Link to={'/collection/playlists'} className='link'>
+            <Link to={'/collection'} className='link'>
                 <SidebaOption Icon={LibraryMusicIcon} option='你的音樂庫' />
             </Link>
             <hr></hr>
