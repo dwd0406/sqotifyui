@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import '../playlist/index.css';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
@@ -146,14 +146,14 @@ const Playlists = props => {
                     <div className="card" key={id}>
                         <div className="cardImage">
                             <img src={playlist.img} alt="Pic 1" />
+                            <span>
+                                <PlayCircleIcon className='playIcon' />
+                            </span>
                         </div>
                         <div className="cardContent">
                             <h3>{playlist.name}</h3>
                             <span className='descspan'>{playlist.desc}</span>
                         </div>
-                        <span>
-                            <PlayCircleIcon className='playIcon' />
-                        </span>
                     </div>
                 </Link>
             ))}

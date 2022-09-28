@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react'
-import Playlists from '../playlist/index.jsx'
+import React, { useRef, useEffect, useState } from 'react';
+import Playlists from '../playlist/index.jsx';
 import '../Collection/index.css';
 
 const Collection = () => {

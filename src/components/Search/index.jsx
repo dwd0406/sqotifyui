@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react'
-import SearchCate from '../SearchCate/index'
+import React, { useRef, useEffect, useState } from 'react';
+import SearchCate from '../SearchCate/index';
 import '../Search/index.css';
 
 const Search = () => {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import '../pages/playsong.css';
