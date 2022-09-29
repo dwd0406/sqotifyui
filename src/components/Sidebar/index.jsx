@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../Sidebar/index.css';
 import SidebaOption from '../SidebarOption';
 import HomeIcon from '@mui/icons-material/Home';
@@ -7,15 +7,9 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddIcon from '@mui/icons-material/Add';
 import { Link } from 'react-router-dom';
-import APIKit from '../.././spotify';
-const Sidebar = () => {
-    const [playlists, setPlaylists] = useState([]);
-    useEffect(() => {
-        APIKit.get("me/playlists").then((response) => {
-            setPlaylists(response.data.items);
-        });
-    }, []);
+import Playlists from '../Playlists';
 
+const Sidebar = () => {
     return (
         <div className='sidebar'>
             <img
@@ -39,13 +33,7 @@ const Sidebar = () => {
                 <SidebaOption Icon={FavoriteIcon} option='已按讚的歌曲' />
             </Link>
             <hr />
-            {playlists.map((playlist) => (
-                <div
-                    key={playlist.id}
-                >
-                    <li><Link to={`/playlist/${playlist.id}`}>{playlist.name}</Link></li>
-                </div>
-                ))}
+            <Playlists></Playlists>
         </div>
     )
 }
