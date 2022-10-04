@@ -1,45 +1,31 @@
-import React, { useEffect } from 'react'
-import { reducerCases } from '../../utils/Constants';
-import { useStateProvider } from '../../utils/StateProvider';
-import axios from "axios";
+import React, { useEffect, useState } from 'react'
+import '../Playlists/index.css'
+import APIKit from '../../utils/StateProvider'
+import { useNavigate } from 'react-router-dom';
+export default function Playlists() {
+    const [playlists, setPlaylists] = useState(null);
 
-const Playlists = () => {
-    const [{ token, playlists }, dispatch] = useStateProvider();
     useEffect(() => {
-        const getPlaylistData = async () => {
-            const response = await axios.get(
-                "https://api.spotify.com/v1/me/playlists",
-                {
-                    headers: {
-                        Authorization: "Bearer " + token,
-                        "Content-Type": "application/json",
-                    },
-                }
-            );
-            const { items } = response.data;
-            const playlists = items.map(({ name, id }) => {
-                return { name, id };
-            });
-            console.log(items);
-            dispatch({ type: reducerCases.SET_PLAYLISTS, playlists });
-        };
-        getPlaylistData();
-    }, [token, dispatch]);
-    const changeCurrentPlaylist = (selectedPlaylistId) => {
-        dispatch({ type: reducerCases.SET_PLAYLIST_ID, selectedPlaylistId });
-    };
+        APIKit.get('users/johnny99457/playlists?offset=0&limit=20').then(function (response) {
+            setPlaylists(response.data.items);
+        });
+    }, []);
+    console.log(playlists);
 
+    const navigate = useNavigate();
+    const playPlaylist = (id) => {
+        navigate('/player', { state: { id: id } });
+    };
     return (
         <div>
-            {playlists.map((playlist) => {
-                return (
-                    <li key={playlist.id} onClick={() => changeCurrentPlaylist(playlist.id)}>
-                        {playlist.name}
-                    </li>
-                );
-            })}
+            {playlists?.map((playlist) => (
+                <div
+                    key={playlist.id}
+                    onClick={() => playPlaylist(playlist.id)}
+                >
+                    <li className='playlistLi'>{playlist.name}</li>
+                </div>
+            ))}
         </div>
     )
 }
-
-export default Playlists

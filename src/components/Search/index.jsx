@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import SearchCate from '../SearchCate/index';
 import '../Search/index.css';
-
+import DDD from '../BrowseCategories';
 const Search = () => {
     const [limiter, setLimiter] = useState(0)
     const mainInnerRef = useRef()
@@ -30,8 +29,7 @@ const Search = () => {
             {dataCategories.map((category, id) => (
                 <div className='SearchcardsWrap' key={id}>
                     <h2>{category.name}</h2>
-                    <p className='subText'>{category.tagline}</p>
-                    <SearchCate category_id={category.id} limiter={limiter} />
+                    <DDD category_id={category.id} limiter={limiter} />
                 </div>
             ))}
         </div>

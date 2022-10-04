@@ -1,12 +1,11 @@
 .sidebar {
-    height: 100vh;
     position: fixed;
     color: white;
     padding-left: 10px;
     padding-right: 10px;
-    min-width: 230px;
-    height: 100vh;
+    width: 13%;
     background-color: black;
+    height: 100%;
 }
 
 .sidebarlogo {
@@ -16,15 +15,34 @@
     padding: 10px;
 }
 
-.userimg {
-    margin-right: auto;
-    height: 50px;
-    padding: 17px;
-    border-radius: 50px;
-    display: flex;
-    position: absolute;
-}
-
 .link {
     text-decoration: none;
+}
+
+.userImg {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    display: flex;
+    padding: 5px;
+}
+
+.userName {
+    margin-left: 5px;
+    align-items: center;
+}
+
+.userInfo {
+    display: flex;
+    position: relative;
+    border-radius: 50px;
+    background-color: rgb(19, 19, 19);
+}
+
+.userInfo:hover {
+    background-color: rgb(41, 41, 41);
+}
+
+.aaa {
+    height: auto;
 }

@@ -1,25 +1,28 @@
-import Rrouter from './components/router';
-import { useStateProvider } from './utils/StateProvider';
-import { useEffect } from 'react';
-import { reducerCases } from './utils/Constants';
+import Rrouter from './components/router'
+import { useEffect } from 'react'
 import Login from './pages/Login';
+import { useState } from 'react';
+import { setClientToken } from './utils/StateProvider';
 
 function App() {
-  const [{ token }, dispatch] = useStateProvider();
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const token = hash.substring(1).split("&")[0].split("=")[1];
-      if (token) {
-        dispatch({ type: reducerCases.SET_TOKEN, token });
-      }
-    }
-    document.title = "Spotify";
-  }, [dispatch, token]);
+  const [token, setToken] = useState('');
 
-  return (
-    <div>{token ? <Rrouter /> : <Login />}</div>
-  );
+  useEffect(() => {
+    const token = window.localStorage.getItem('token');
+    const hash = window.location.hash;
+    window.location.hash = '';
+    if (!token && hash) {
+      const _token = hash.split('&')[0].split('=')[1];
+      window.localStorage.setItem('token', _token);
+      setToken(_token);
+      setClientToken(_token);
+    } else {
+      setToken(token);
+      setClientToken(token);
+    }
+  }, []);
+
+  return !token ? (<Login />) : (<Rrouter />)
 }
 
 export default App;

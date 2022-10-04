@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../playlist/index.css';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
-const Playlists = props => {
+const Playlist = props => {
     const dataPlaylists = [
         {
             id: 101,
@@ -161,4 +161,4 @@ const Playlists = props => {
     )
 }
 
-export default Playlists
+export default Playlist

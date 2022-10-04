@@ -5,7 +5,6 @@ import Categories from '../Categories';
 import PlaylistPage from '../../pages/Playlistpages';
 import Search from '../Search';
 import Collection from '../Collection';
-import Playlists from '../Playlists';
 const Body = () => {
   return (
     <div className='body'>
@@ -14,7 +13,6 @@ const Body = () => {
         <Route path='/search' element={<Search />} />
         <Route path='/collection' element={<Collection />} />
         <Route path='playlist/:id' element={<PlaylistPage />} />
-        <Route path='/Home' element={<Playlists/>} />
       </Routes>
     </div>
   )
